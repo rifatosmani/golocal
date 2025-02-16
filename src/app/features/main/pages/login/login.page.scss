@@ -1,0 +1,29 @@
+
+  ion-content{
+    .page{
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+  
+    .logo{
+      display: flex;
+      justify-content: center;
+      img{
+        width: 30%;
+      }
+    }
+    form{
+      ion-input{
+        --background:white;
+        --border-radius:25px;
+        --placeholder-color:black;
+        --padding-start:20px;
+        margin-top: 20px;
+      }
+      ion-button{
+        margin-top: 20px;
+      }
+    } 
+  }
+  

@@ -1,0 +1,11 @@
+<ion-card>
+  <img alt="Silhouette of mountains" [src]="getMainMediaUrl()" />
+  <ion-card-header>
+    <ion-card-title>{{site.name}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    {{site.description}}
+  </ion-card-content>
+  <ng-content></ng-content>
+</ion-card>

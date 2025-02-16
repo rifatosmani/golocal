@@ -1,0 +1,38 @@
+{
+  "/api/**": {
+    "target": "http://localhost:8005",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "cookiePathRewrite": {
+      "*": "/"
+    }
+  },
+  "/product-images/**": {
+    "target": "http://localhost:8005",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "cookiePathRewrite": {
+      "*": "/"
+    }
+  },
+  "/auth/**": {
+    "target": "http://localhost:8005",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "cookiePathRewrite": {
+      "*": "/"
+    }
+  },
+  "/chat-ws": {
+    "target": "http://localhost:8005",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "cookiePathRewrite": {
+      "*": "/"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+ion-tab-bar {
+    --background: white; /* Custom background color */
+    --color: black; /* Default text/icon color */
+    --color-selected: #ffd700; /* Highlighted button color */
+  }
+  
+  ion-tab-button {
+    --color-selected: #ffd700; /* Override individual selected button color */
+  }
+
+  .sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure it stays above other content */
+    --background: #8c0538; /* Custom background color for the footer */
+  }

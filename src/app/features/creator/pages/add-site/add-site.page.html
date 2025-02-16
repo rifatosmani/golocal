@@ -1,0 +1,67 @@
+<ion-content [fullscreen]="true">
+  <ion-card class="custom-card">
+    <img [src]="mainMediaUrl" alt="" class="card-image">
+    <!-- Floating Action Button (FAB) positioned over the image -->
+    <ion-fab class="custom-fab">
+      <ion-fab-button (click)="onSelectMainImage()" >
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-card>
+  <form (ngSubmit)="saveSite()"  [formGroup]="addSiteForm">
+  <ion-list>
+    <ion-item>
+      <ion-input formControlName="name" placeholder="Enter site name"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input formControlName="description" placeholder="Enter site description"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-textarea formControlName="extDescription" placeholder="Enter site extended description"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-select formControlName="category" label="Floating label" label-placement="floating">
+        <ion-select-option *ngFor="let cat of categoryTree" [value]="cat.name" [value]="cat.categoryId">{{cat.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="country" placeholder="Country"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="city" placeholder="City"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input formControlName="address" placeholder="Address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input formControlName="zipCode" placeholder="Zip Code"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div class="scrolling-wrapper">
+    <ion-thumbnail class="card" (click)="onSelectImage()">
+      <img alt="Silhouette of mountains" src="assets/golocal/image-outline.svg" />
+    </ion-thumbnail>
+    
+    <ion-thumbnail class="card" *ngFor="let img of imageList$ | async" style="position: relative;">
+      <img alt="Silhouette of mountains" [src]="img.url" />
+      <button 
+        type="button" 
+        class="close-btn" 
+        (click)="removeImage(img)" 
+        style="position: absolute; top: 0px; right: 5px; background: rgba(0,0,0,0.7); color: white; border: none; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+        ×
+      </button>
+    </ion-thumbnail>
+    
+  </div>
+
+  <ion-button color="secondary" shape="round" expand="block" type="submit">
+    Save
+  </ion-button>
+</form>
+</ion-content>

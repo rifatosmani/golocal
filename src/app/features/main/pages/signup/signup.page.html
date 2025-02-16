@@ -1,0 +1,38 @@
+<!--
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+-->
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="logo">
+    <img src="assets/golocal/logo/logo.png" alt="">
+  </div>
+  <!-- Form Container -->
+  <form (ngSubmit)="signup()">
+    <!-- FirstName Field -->
+    <ion-input placeholder="First Name" type="text" [(ngModel)]="firstname" name="firstname" required></ion-input>
+
+    <!-- LastName Field -->
+    <ion-input placeholder="Last Name" type="text" [(ngModel)]="lastname" name="lastname" required></ion-input>
+
+    <!-- Email Field -->
+    <ion-input placeholder="Email" type="text" [(ngModel)]="email" name="email" required></ion-input>
+    <!-- Confirm Email Field -->
+    <ion-input placeholder="Confirm Email" type="text" [(ngModel)]="confirmemail" name="confirmemail" required></ion-input>
+    <!-- UserName Field -->
+    <ion-input placeholder="Userame" type="text" [(ngModel)]="username" name="username" required></ion-input>
+
+    <!-- Email Field -->
+    <ion-input placeholder="Password" type="password" [(ngModel)]="password" name="password" required></ion-input>
+    <!-- Email Field -->
+    <ion-input placeholder="Confirm Password" type="password" [(ngModel)]="confirmpassword" name="confirmpassword" required></ion-input>
+
+    <!-- Signup Button -->
+    <ion-button color="secondary" shape="round" expand="block" type="submit" [disabled]="loading">
+      Signup
+    </ion-button>
+  </form>
+
+</ion-content>

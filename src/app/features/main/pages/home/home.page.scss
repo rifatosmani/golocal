@@ -1,0 +1,25 @@
+ion-col{
+    padding: 0px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  ion-button {
+    margin: 0 5px;
+  }
+
+  .scrollable-row {
+    display: block;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Ensures items stay in a single row */
+    padding: 8px;
+  }
+  
+  .scrollable-row ion-row {
+    flex-wrap: nowrap; /* Prevents items from wrapping to the next row */
+  }
+  

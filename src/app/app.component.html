@@ -1,0 +1,18 @@
+<ion-app>
+  <ion-toolbar>
+    <!-- Back Button -->
+    <ion-buttons slot="start">
+      <ion-button *ngIf="canGoBack()" (click)="goBack()" >
+        <ion-icon slot="icon-only" name="chevron-back-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    <!-- Title -->
+    <ion-title>GoLocal</ion-title>
+
+    <!-- User Icon -->
+    <ion-icon size="large" slot="end" name="person-circle-outline"></ion-icon>
+  </ion-toolbar>
+  <ion-router-outlet></ion-router-outlet>
+  <app-footer></app-footer>
+</ion-app>

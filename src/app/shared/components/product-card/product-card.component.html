@@ -1,0 +1,12 @@
+<ion-card>
+  <ion-item lines="none">
+    <ion-thumbnail slot="start">
+      <img alt="{{ product.name }}" [src]="getMainMediaUrl()" />
+    </ion-thumbnail>
+    <ion-label>
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <p><strong>{{ product.price | currency:'EUR' }}</strong></p>
+    </ion-label>
+  </ion-item>
+</ion-card>

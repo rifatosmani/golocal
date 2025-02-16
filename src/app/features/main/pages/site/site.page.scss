@@ -1,0 +1,16 @@
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  
+    .card {
+      display: inline-block;
+      --size:100px;
+      margin: 10px;
+    }
+  }
+ion-fab{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

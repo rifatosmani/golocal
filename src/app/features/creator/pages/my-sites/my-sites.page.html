@@ -1,0 +1,6 @@
+<ion-content [fullscreen]="true">
+  <div *ngIf="mySites">
+    <app-site-card (click)="onSelectSite(site)" *ngFor="let site of mySites" [site]="site" >
+    </app-site-card>
+  </div>
+</ion-content>

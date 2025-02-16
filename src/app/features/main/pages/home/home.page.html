@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true">
+  <!--
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" *ngFor="let category of categoryTree">
+        <app-card [title]="category.name" class="category">
+        </app-card>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+  -->
+
+  <app-creator-card></app-creator-card>
+
+  <ion-searchbar color="light" placeholder="Search"></ion-searchbar>
+  <ion-grid *ngIf="categoryTree" class="scrollable-row">
+    <ion-row>
+      <ion-col size="3">
+        <app-category-card [selectedCategory]="selectedCategory?.categoryId"
+          [category]="explore" class="category" (click)="onSelectCategory(explore)">
+        </app-category-card>
+      </ion-col>
+      <ion-col size="3" *ngFor="let category of categoryTree">
+        <app-category-card (click)="onSelectCategory(category)" [selectedCategory]="selectedCategory?.categoryId"
+          [category]="category" class="category">
+        </app-category-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div *ngIf="sites">
+    <app-site-card (click)="onSelectSite(site)" *ngFor="let site of sites" [site]="site" >
+    </app-site-card>
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,20 @@
+ion-card{
+    //width: 30%;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    img{
+      width: 50%;
+    }
+    ion-card-subtitle{
+      margin: 3px;
+      text-align: center;
+      white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.selected-card{
+  --background:var(--ion-color-secondary);
+}

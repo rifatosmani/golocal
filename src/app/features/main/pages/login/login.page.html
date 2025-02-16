@@ -1,0 +1,31 @@
+<!--
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+-->
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="logo">
+    <img src="assets/golocal/logo/logo.png" alt="">
+  </div>
+  <!-- Form Container -->
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <!-- Username Field -->
+    <ion-input placeholder="Username" type="text" formControlName="username" name="username" required></ion-input>
+
+    <!-- Password Field -->
+    <ion-input placeholder="Password" type="password" formControlName="password" name="password" required></ion-input>
+
+    <!-- Login Button -->
+    <ion-button color="secondary" shape="round" expand="block" type="submit" [disabled]="loading">
+      Login
+    </ion-button>
+  </form>
+
+  <!-- Login Button -->
+  <ion-button (click)="goToSignup()" fill="solid" color="light" shape="round" expand="block" type="submit" [disabled]="loading">
+    Don't have an account ? Register
+  </ion-button>
+
+</ion-content>
